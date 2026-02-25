@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -28,15 +29,13 @@ static const char *colors[][3]      = {
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "brave-browser",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "brave",  NULL,       NULL,       1 << 2,       0,           -1 },
+    /* class            instance    title       tags mask     isfloating   monitor */
+    { "Gimp",           NULL,       NULL,       0,            1,           -1 },
+    { "brave-browser",  NULL,       NULL,       1 << 2,       0,           -1 },
+    { "brave",	        NULL,       NULL,       1 << 2,       0,           -1 },
+    { "stalonetray",    NULL,       NULL,       ~0,           1,           -1 },
+    { "nm-applet",      NULL,       NULL,       ~0,           1,           -1 },
+    { "pa-applet",      NULL,       NULL,       ~0,           1,           -1 }
 };
 
 /* layout(s) */
@@ -94,6 +93,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	/* Lower Volume */
+	{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume 0 -5%") },
+	/* Raise Volume */
+	{ 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume 0 +5%") },
+	/* Mute */
+	{ 0, XF86XK_AudioMute,        spawn, SHCMD("pactl set-sink-mute 0 toggle") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
