@@ -12,10 +12,15 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const char col_bg[]       = "#0a0a0a"; // Background
+static const char col_ina_border[]       = "#444444"; // Inactive border
+static const char col_ina_text[]       = "#e0e0e0"; // Inactive text
+static const char col_act_text[]       = "#ffffff"; // Active text
+static const char col_accent[]        = "#880000"; // Active accent (Blood)
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_ina_text, col_bg, col_ina_border },
+	[SchemeSel]  = { col_act_text, col_accent,  col_accent  },
 };
 
 /* tagging */
