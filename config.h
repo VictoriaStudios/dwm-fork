@@ -73,6 +73,10 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "ghostty", "-e", "zsh", "-c", "fastfetch; zsh", NULL };
+static const char *ss_full_file[] = {"screenshot.sh","full_file", NULL};
+static const char *ss_full_clip[] = {"screenshot.sh","full_clip", NULL};
+static const char *ss_area_file[] = {"screenshot.sh","area_file", NULL};
+static const char *ss_area_clip[] = {"screenshot.sh","area_clip", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -99,6 +103,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ 0,				XK_Print,  spawn,	   {.v = ss_full_file} },
+	{ ShiftMask,			XK_Print,  spawn,	   {.v = ss_full_clip} },
+	{ ShiftMask,			XK_Print,  spawn,	   {.v = ss_area_file} },
+	{ MODKEY|ShiftMask,		XK_Print,  spawn,	   {.v = ss_area_clip} },
 	/* Lower Volume */
 	{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%") },
 	/* Raise Volume */
