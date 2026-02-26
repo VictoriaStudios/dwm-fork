@@ -38,8 +38,6 @@ static const Rule rules[] = {
     { "Gimp",           NULL,       NULL,       0,            1,           -1 },
     { "brave-browser",  NULL,       NULL,       1 << 2,       0,           -1 },
     { "brave",	        NULL,       NULL,       1 << 2,       0,           -1 },
-    { "trayer",	        NULL,       NULL,       ~0,           1,           -1 },
-    { "panel",	        NULL,       NULL,       ~0,           1,           -1 },
     { "nm-applet",      NULL,       NULL,       ~0,           1,           -1 },
     { "com.ghostty.ghost1",      NULL,       NULL,       1 << 0,           0,           -1 },
     { "com.ghostty.ghost2",      NULL,       NULL,       1 << 1,           0,           -1 },
