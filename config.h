@@ -27,7 +27,7 @@ static const char col_accent[]        = "#880000"; // Active accent (Blood)
 static const char col_purp_bright[] = "#6a0dad";						   
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_ina_text, col_bg, col_ina_border },
+	[SchemeNorm] = { col_ina_text, col_purp_bright, col_ina_border },
 	[SchemeSel]  = { col_act_text, col_accent,  col_purp_bright  },
 };
 
