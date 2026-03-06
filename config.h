@@ -24,11 +24,12 @@ static const char col_ina_border[]       = "#444444"; // Inactive border
 static const char col_ina_text[]       = "#e0e0e0"; // Inactive text
 static const char col_act_text[]       = "#ffffff"; // Active text
 static const char col_accent[]        = "#880000"; // Active accent (Blood)
+static const char col_accent2[]        = "#35C9CA"; // Active accent (Azure)
 static const char col_purp_bright[] = "#6a0dad";						   
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_ina_text, col_purp_bright, col_ina_border },
-	[SchemeSel]  = { col_act_text, col_accent,  col_purp_bright  },
+	[SchemeSel]  = { col_act_text, col_accent2,  col_purp_bright  },
 };
 
 /* tagging */
