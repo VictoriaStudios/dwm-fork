@@ -82,6 +82,7 @@ static const char *ss_full_file[] = {"screenshot.sh","full_file", NULL};
 static const char *ss_full_clip[] = {"screenshot.sh","full_clip", NULL};
 static const char *ss_area_file[] = {"screenshot.sh","area_file", NULL};
 static const char *ss_area_clip[] = {"screenshot.sh","area_clip", NULL};
+static const char *toggle_touchpad[] = {"toggle_touchpad.sh", NULL, NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -112,6 +113,9 @@ static const Key keys[] = {
 	{ ShiftMask,			XK_Print,  spawn,	   {.v = ss_full_clip} },
 	{ ShiftMask,			XK_Print,  spawn,	   {.v = ss_area_file} },
 	{ MODKEY|ShiftMask,		XK_Print,  spawn,	   {.v = ss_area_clip} },
+
+  /* touchpad control */
+	{ MODKEY,		XK_F5,  spawn,	   {.v = toggle_touchpad} },
 	/* Lower Volume */
 	{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%") },
 	/* Raise Volume */
