@@ -38,15 +38,18 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const Rule rules[] = {
     /* class            instance    title       tags mask     isfloating   monitor */
     { "Gimp",           NULL,       NULL,       0,            1,           -1 },
-    { "brave-browser",  NULL,       NULL,       1 << 2,       0,           -1 },
-    { "brave",	        NULL,       NULL,       1 << 2,       0,           -1 },
+    { "brave-browser",  NULL,       NULL,       1 << 2,       0,           0 },
+    { "brave",	        NULL,       NULL,       1 << 2,       0,           0 },
     { "nm-applet",      NULL,       NULL,       ~0,           1,           -1 },
-    { "com.ghostty.ghost1",      NULL,       NULL,       1 << 0,           0,           -1 },
-    { "com.ghostty.ghost2",      NULL,       NULL,       1 << 1,           0,           -1 },
+    { "com.ghostty.ghost1",      NULL,       NULL,       1 << 0,           0,           0 },
+    { "com.ghostty.ghost2",      NULL,       NULL,       1 << 1,           0,           0 },
     { "com.ghostty.btop",      NULL,       NULL,       1 << 8,           0,           1 },
-    { "com.ghostty.ghostmc",      NULL,       NULL,       1 << 3,           0,           -1 },
-    { "doublecmd",      NULL,       NULL,       1 << 3,           0,           -1 },
-    { "Doublecmd",      NULL,       NULL,       1 << 3,           0,           -1 },
+    { "com.ghostty.ghostmc",      NULL,       NULL,       1 << 3,           0,           0 },
+    { "doublecmd",      NULL,       NULL,       1 << 3,           0,           0 },
+    { "Doublecmd",      NULL,       NULL,       1 << 3,           0,           0 },
+    { "discord",      NULL,       NULL,       1 << 5,           0,           0 },
+    { "steamwebhelper",      NULL,       NULL,       1 << 4,           0,           0 },
+    { "steam",      NULL,       NULL,       1 << 4,           0,           0 },
     { "pa-applet",      NULL,       NULL,       ~0,           1,           -1 }
 };
 
