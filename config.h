@@ -84,6 +84,7 @@ static const char *ss_full_clip[] = {"screenshot.sh","full_clip", NULL};
 static const char *ss_area_file[] = {"screenshot.sh","area_file", NULL};
 static const char *ss_area_clip[] = {"screenshot.sh","area_clip", NULL};
 static const char *toggle_touchpad[] = {"toggle_touchpad.sh", NULL, NULL};
+static const char *lockcmd[] = { "slock", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -113,6 +114,7 @@ static const Key keys[] = {
 	{ 0,				XK_Print,  spawn,	   {.v = ss_full_file} },
 	{ ShiftMask,			XK_Print,  spawn,	   {.v = ss_full_clip} },
 	{ ShiftMask,			XK_Print,  spawn,	   {.v = ss_area_file} },
+	{ MODKEY|ShiftMask,			XK_e,  spawn,	   {.v = lockcmd} },
 	{ MODKEY|ShiftMask,		XK_Print,  spawn,	   {.v = ss_area_clip} },
 
   /* touchpad control */
