@@ -87,7 +87,7 @@ static const char *ss_full_clip[] = {"screenshot.sh","full_clip", NULL};
 static const char *ss_area_file[] = {"screenshot.sh","area_file", NULL};
 static const char *ss_area_clip[] = {"screenshot.sh","area_clip", NULL};
 static const char *toggle_touchpad[] = {"toggle_touchpad.sh", NULL, NULL};
-static const char *lockcmd[] = { "slock", NULL };
+static const char *lockcmd[] = { "/bin/sh","-c", "slock & sleep 0.2 && sudo zzz", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
