@@ -50,7 +50,9 @@ static const Rule rules[] = {
     { "discord",      NULL,       NULL,       1 << 5,           0,           0 },
     { "steamwebhelper",      NULL,       NULL,       1 << 4,           0,           0 },
     { "steam",      NULL,       NULL,       1 << 4,           0,           0 },
-    { "pa-applet",      NULL,       NULL,       ~0,           1,           -1 }
+    { "pa-applet",      NULL,       NULL,       ~0,           1,           -1 },
+    { "Mail",      NULL,       NULL,       1 << 7,           0,           -1 },
+    { "Thunderbird",      NULL,       NULL,       1 << 7,           0,           -1 }
 };
 
 /* layout(s) */
