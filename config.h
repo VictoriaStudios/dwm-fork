@@ -83,13 +83,13 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "ghostty", "-e", "zsh", "-c", "fastfetch; zsh", NULL };
+static const char *termcmd[]  = { "kitty", "-e", "zsh", "-c", "fastfetch; zsh", NULL };
 static const char *ss_full_file[] = {"screenshot.sh","full_file", NULL};
 static const char *ss_full_clip[] = {"screenshot.sh","full_clip", NULL};
 static const char *ss_area_file[] = {"screenshot.sh","area_file", NULL};
 static const char *ss_area_clip[] = {"screenshot.sh","area_clip", NULL};
 static const char *toggle_touchpad[] = {"toggle_touchpad.sh", NULL, NULL};
-static const char *lockcmd[] = { "/bin/sh","-c", "slock & sleep 0.2 && sudo zzz", NULL };
+static const char *lockcmd[] = { "loginctl", "lock-session", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
