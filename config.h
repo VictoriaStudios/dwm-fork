@@ -39,7 +39,7 @@ static const Rule rules[] = {
     /* class            instance    title       tags mask     isfloating   monitor */
     { "Gimp",           NULL,       NULL,       0,            1,           -1 },
     { "brave-browser",  NULL,       NULL,       1 << 2,       0,           0 },
-    { "brave",	        NULL,       NULL,       1 << 2,       0,           0 },
+    { "Brave-browser",	        NULL,       NULL,       1 << 2,       0,           0 },
     { "nm-applet",      NULL,       NULL,       ~0,           1,           -1 },
     { "com.kitty.term1",      NULL,       NULL,       1 << 0,           0,           0 },
     { "com.kitty.term2",      NULL,       NULL,       1 << 1,           0,           0 },
